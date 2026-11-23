@@ -1,0 +1,9 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NOVA AI</title><link rel="stylesheet" href="/static/style.css"></head>
+<body><div id="login" class="login-wrap"><div class="login-card"><div class="logo">✦ NOVA</div><p>Your AI workspace</p><input id="pass" type="password" placeholder="Access password"><button onclick="login()">Enter NOVA</button><div id="loginerr"></div></div></div>
+<div id="app" class="shell hidden"><aside class="sidebar"><div class="logo">✦ NOVA</div><button class="new" onclick="newChat()">＋ New chat</button><div class="label">RECENT</div><div id="history"></div><div class="sidebottom"><span>AI workspace</span><button onclick="logout()">Log out</button></div></aside>
+<main class="main"><header><button class="mobile-menu" onclick="toggleSide()">☰</button><div><b>NOVA AI</b><small>Multi-provider assistant</small></div><select id="model"><option value="auto">Auto model</option><option value="gpt-4o">GPT-4o</option><option value="gemini">Gemini</option><option value="claude">Claude</option></select></header>
+<section id="messages" class="messages"><div class="welcome"><div class="orb">✦</div><h1>What can I help you with?</h1><p>Ideas, code, research or creative work. Start anywhere.</p><div class="suggestions"><button onclick="suggest('Help me build a website')">Build a website</button><button onclick="suggest('Explain a difficult topic simply')">Learn something</button><button onclick="suggest('Write a creative story')">Create a story</button></div></div></section>
+<div class="composer"><textarea id="input" rows="1" placeholder="Message NOVA..." onkeydown="keySend(event)"></textarea><button class="send" onclick="send()">↑</button><div class="footnote">Provider availability may vary. Verify important answers.</div></div></main></div>
+<script src="/static/app.js"></script></body></html>
